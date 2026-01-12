@@ -1,0 +1,78 @@
+{
+  "name": "initred/laravel-boost-guidelines",
+  "description": "Generate AI-friendly project guidelines for Laravel applications - Part of Laravel Boost ecosystem",
+  "keywords": [
+    "laravel",
+    "boost",
+    "guidelines",
+    "ai",
+    "claude",
+    "cursor",
+    "copilot",
+    "inertia",
+    "react"
+  ],
+  "homepage": "https://github.com/initred/laravel-boost-guidelines",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Initred",
+      "email": "initred@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/console": "^11.0|^12.0",
+    "illuminate/contracts": "^11.0|^12.0",
+    "illuminate/filesystem": "^11.0|^12.0",
+    "illuminate/support": "^11.0|^12.0",
+    "illuminate/view": "^11.0|^12.0",
+    "laravel/prompts": "^0.3|^0.4"
+  },
+  "require-dev": {
+    "larastan/larastan": "^3.0",
+    "laravel/pint": "^1.18",
+    "orchestra/testbench": "^9.0|^10.0",
+    "pestphp/pest": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Initred\\BoostGuidelines\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Initred\\BoostGuidelines\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@test:lint",
+      "@test:types",
+      "@test:unit"
+    ],
+    "test:lint": "vendor/bin/pint --parallel",
+    "test:types": "vendor/bin/phpstan analyse",
+    "test:unit": "vendor/bin/pest",
+    "format": "vendor/bin/pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Initred\\BoostGuidelines\\BoostGuidelinesServiceProvider"
+      ],
+      "aliases": {
+        "BoostGuidelines": "Initred\\BoostGuidelines\\Facades\\BoostGuidelines"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
