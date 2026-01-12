@@ -3,9 +3,27 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/initred/laravel-boost-guidelines/tests.yml?label=tests)](https://github.com/initred/laravel-boost-guidelines/actions/workflows/tests.yml)
 [![Latest Stable Version](https://img.shields.io/packagist/v/initred/laravel-boost-guidelines)](https://packagist.org/packages/initred/laravel-boost-guidelines)
 [![Total Downloads](https://img.shields.io/packagist/dt/initred/laravel-boost-guidelines)](https://packagist.org/packages/initred/laravel-boost-guidelines)
-[![License](https://img.shields.io/packagist/l/initred/laravel-boost-guidelines)](https://packagist.org/packages/initred/laravel-boost-guidelines)
+[![License](https://img.shields.io/github/license/initred/laravel-boost-guidelines)](https://github.com/initred/laravel-boost-guidelines/blob/main/LICENSE)
 
-AI guidelines extension for Laravel Boost - Provides Inertia React, shadcn/ui, and Tailwind CSS v4 guidelines.
+> AI-powered coding guidelines for Laravel + Inertia React + Tailwind CSS v4 + shadcn/ui
+
+Install best-practice guidelines for modern Laravel stack via a simple Artisan command. Works seamlessly with AI coding assistants like Claude, Cursor, and GitHub Copilot.
+
+## Features
+
+- **Inertia React v2 Forms** - Modern `<Form>` component and `useForm` hook patterns
+- **Tailwind CSS v4 Migration** - CSS-first config, new utilities, deprecated class replacements
+- **shadcn/ui Integration** - Proper error states, accessible form fields, button icon styling
+- **Wayfinder Support** - Type-safe form actions with `.form()` method
+- **Interactive CLI** - Select specific guidelines or install all at once
+
+## Quick Start
+
+```bash
+composer require initred/laravel-boost-guidelines --dev
+
+php artisan boost:guidelines --all
+```
 
 ## Installation
 
@@ -98,20 +116,25 @@ Add to your project's `composer.json` scripts to automatically install guideline
 
 Inertia v2 form handling guidelines (upgrade from v1's `router.post` pattern):
 
-- **`<Form>` Component** (v2.1+): Declarative form handling with built-in state management
-- **`useForm` Hook** (v2.0.x): For projects not yet on v2.1
-- **shadcn/ui Integration**: Field components with proper error states (`data-invalid`, `aria-invalid`)
-- **shadcn/ui Button**: Icon styling best practices (no unnecessary `mr-*` or `size-*` classes)
-- **Wayfinder Support**: Type-safe form actions with `.form()` method
+| Feature | Description |
+|---------|-------------|
+| `<Form>` Component | Declarative form handling with built-in state management (v2.1+) |
+| `useForm` Hook | For projects not yet on v2.1 |
+| shadcn/ui Integration | Field components with proper error states (`data-invalid`, `aria-invalid`) |
+| shadcn/ui Button | Icon styling best practices (no unnecessary `mr-*` or `size-*` classes) |
+| Wayfinder Support | Type-safe form actions with `.form()` method |
 
 ### tailwindcss/4/core
 
 Tailwind CSS v4 migration guide:
 
-- **CSS-first Config**: Use `@theme` directive instead of `tailwind.config.js`
-- **New Import**: `@import "tailwindcss"` replaces `@tailwind` directives
-- **Deprecated Utilities**: `bg-opacity-*` → `bg-black/*`, `flex-shrink-*` → `shrink-*`, etc.
-- **Size Utility**: Use `size-*` instead of `w-* h-*` for equal dimensions
+| Before (v3) | After (v4) |
+|-------------|------------|
+| `tailwind.config.js` | `@theme` directive in CSS |
+| `@tailwind base/components/utilities` | `@import "tailwindcss"` |
+| `bg-opacity-50` | `bg-black/50` |
+| `flex-shrink-0` | `shrink-0` |
+| `w-4 h-4` | `size-4` |
 
 ## Running Tests
 
@@ -126,7 +149,11 @@ composer test
 
 - PHP 8.2+
 - Laravel 11.x or 12.x
-- Laravel Boost
+- [Laravel Boost](https://github.com/nicepkg/laravel-boost)
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
