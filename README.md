@@ -126,6 +126,7 @@ Inertia v2 form handling guidelines (upgrade from v1's `router.post` pattern):
 | shadcn/ui Integration | Field components with proper error states (`data-invalid`, `aria-invalid`) |
 | shadcn/ui Button | Icon styling best practices (no unnecessary `mr-*` or `size-*` classes) |
 | Wayfinder Support | Type-safe form actions with `.form()` method |
+| React 19 & Compiler | `useRef` argument requirements, ref callback syntax, auto-memoization |
 
 ### tailwindcss/4/core
 

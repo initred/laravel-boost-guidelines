@@ -163,3 +163,13 @@
 </Button>
 </code-snippet>
 @endverbatim
+
+## React 19 & Compiler Notes
+
+### React Compiler
+- Remove manual `useMemo`, `useCallback`, `React.memo` - compiler handles this automatically.
+- Use `"use no memo"` directive to opt-out problematic components.
+
+### React 19
+- `useRef()` requires argument: use `useRef(null)` or `useRef<T>(null)`.
+- Ref callbacks must use explicit blocks: `ref={el => { inputRef = el }}`, not `ref={el => inputRef = el}`.
