@@ -83,6 +83,9 @@ php artisan boost:guidelines --tailwindcss --inertia-react
 # Force overwrite existing files
 php artisan boost:guidelines --force
 
+# Skip boost:update prompt after installation
+php artisan boost:guidelines --all --no-update
+
 # List available guidelines
 php artisan boost:guidelines --list
 ```
@@ -103,7 +106,7 @@ Add to your project's `composer.json` scripts to automatically install guideline
 {
     "scripts": {
         "post-update-cmd": [
-            "@php artisan boost:guidelines --all --force",
+            "@php artisan boost:guidelines --all --force --no-update",
             "@php artisan boost:update --ansi"
         ]
     }

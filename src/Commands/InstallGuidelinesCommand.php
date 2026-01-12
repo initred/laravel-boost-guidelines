@@ -21,7 +21,8 @@ class InstallGuidelinesCommand extends Command
                             {--all : Install all guidelines}
                             {--tailwindcss : Install only Tailwind CSS guidelines}
                             {--inertia-react : Install only Inertia React guidelines}
-                            {--force : Overwrite existing files without confirmation}';
+                            {--force : Overwrite existing files without confirmation}
+                            {--no-update : Skip running boost:update after installation}';
 
     protected $description = 'Install AI guidelines for Laravel Boost';
 
@@ -496,6 +497,11 @@ class InstallGuidelinesCommand extends Command
      */
     protected function shouldRunBoostUpdate(): bool
     {
+        // Skip if --no-update flag is set
+        if ($this->option('no-update')) {
+            return false;
+        }
+
         // Check if boost:update command exists
         if (! $this->getApplication()?->has('boost:update')) {
             note('Run `php artisan boost:update` to apply the guidelines.');
