@@ -128,6 +128,18 @@ Inertia v2 form handling guidelines (upgrade from v1's `router.post` pattern):
 | Wayfinder Support | Type-safe form actions with `.form()` method |
 | React 19 & Compiler | `useRef` argument requirements, ref callback syntax, auto-memoization |
 
+### wayfinder/core
+
+Laravel Wayfinder integration for type-safe routing:
+
+| Feature | Description |
+|---------|-------------|
+| Named Imports | Tree-shakable controller method imports |
+| Route Objects | Functions return `{ url, method }` shaped objects |
+| Form Support | `.form()` method for HTML form attributes |
+| Query Parameters | `query` and `mergeQuery` options for URL params |
+| Inertia Integration | Works with `<Form>` component and `useForm` hook |
+
 ### tailwindcss/4/core
 
 Tailwind CSS v4 migration guide:

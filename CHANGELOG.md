@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2025-01-13
+
+### Added
+
+- Wayfinder core guideline with type-safe routing patterns
+
 ## [1.2.0] - 2025-01-12
 
 ### Added
@@ -33,7 +39,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `--all` option to install all guidelines
 - `--force` option to overwrite existing files
 
-[Unreleased]: https://github.com/initred/laravel-boost-guidelines/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/initred/laravel-boost-guidelines/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/initred/laravel-boost-guidelines/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/initred/laravel-boost-guidelines/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/initred/laravel-boost-guidelines/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/initred/laravel-boost-guidelines/releases/tag/v1.0.0
